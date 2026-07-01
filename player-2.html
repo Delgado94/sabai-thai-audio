@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sabai Thai · Food &amp; Drink</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Outfit:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2B3A42;--jade:#1B7A6B;--jadeSoft:#E4F3EF;--jadeLine:#8FC9BE;--peach:#FF8A4C;--peachSoft:#FFEEE1;--gold:#C8A03A;--muted:#7C8990}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Outfit',sans-serif;background:#F4FAF8;color:var(--ink);-webkit-font-smoothing:antialiased;padding:18px 14px 40px}
+.wrap{max-width:560px;margin:0 auto}
+.head{text-align:center;position:relative;padding:8px 0 14px}
+.head img{width:88px;filter:drop-shadow(0 5px 9px rgba(0,0,0,.15))}
+.kick{display:inline-block;font-family:'Baloo 2';font-weight:700;font-size:12px;letter-spacing:.1em;color:var(--jade);background:var(--jadeSoft);padding:4px 14px;border-radius:999px;text-transform:uppercase}
+h1{font-family:'Baloo 2';font-weight:800;font-size:30px;margin-top:8px}
+.wm{font-family:'Baloo 2';font-weight:700;color:var(--gold);font-size:13px;margin-top:2px}
+.allbtn{margin:12px auto 0;display:flex;align-items:center;gap:8px;background:var(--jade);color:#EAFBF6;border:none;font-family:'Baloo 2';font-weight:700;font-size:15px;padding:10px 20px;border-radius:999px;box-shadow:0 4px 0 #12564C;cursor:pointer}
+.allbtn svg{width:16px;height:16px;fill:currentColor}
+.list{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.row{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:#fff;border:2.5px solid var(--jadeLine);border-radius:20px;padding:12px 14px;cursor:pointer;font:inherit;color:inherit;transition:transform .08s,box-shadow .12s}
+.row:nth-child(even){border-color:#F6B48A;background:#fff}
+.row:active{transform:scale(.99)}
+.row.playing{box-shadow:0 0 0 3px rgba(27,122,107,.25);background:var(--jadeSoft)}
+.num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--jadeSoft);color:var(--jade);font-family:'Baloo 2';font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.txt{flex:1;min-width:0;display:flex;flex-direction:column}
+.thai{font-family:'Baloo 2';font-weight:700;font-size:24px;line-height:1.15}
+.rom{font-style:italic;color:var(--gold);font-weight:600;font-size:13px}
+.eng{color:var(--muted);font-weight:600;font-size:13px;margin-top:1px}
+.play{flex-shrink:0;width:42px;height:42px;border-radius:50%;background:var(--jade);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 0 #12564C}
+.play svg{width:20px;height:20px}
+.row.playing .play{background:var(--peach);box-shadow:0 3px 0 #C96A2E}
+.foot{text-align:center;margin-top:22px;color:var(--muted);font-size:12px}
+.nav{display:flex;justify-content:center;gap:6px;margin-top:16px;flex-wrap:wrap}
+.nav a{font-family:'Baloo 2';font-weight:700;font-size:12px;text-decoration:none;color:var(--jade);border:2px solid var(--jadeLine);border-radius:999px;padding:5px 12px}
+.nav a.on{background:var(--jade);color:#fff;border-color:var(--jade)}
+</style></head><body><div class="wrap">
+<div class="head">
+  <img src="mascots/bua.png" alt="">
+  <div><span class="kick">Sabai Thai · Audio 2 of 5</span></div>
+  <h1>Food &amp; Drink</h1>
+  <div class="wm">สบายไทย</div>
+  <button class="allbtn" id="all"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Play all</button>
+</div>
+<div class="list" id="list">
+    <button class="row" data-src="audio/g2-01.mp3">
+      <span class="num">1</span>
+      <span class="txt"><span class="thai">ขอเมนูด้วยครับ</span><span class="rom">khɔɔ meenuu duay khrap</span><span class="eng">May I have the menu? (male)</span></span>
+      <span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+    </button>
+    <button class="row" data-src="audio/g2-02.mp3">
+      <span class="num">2</span>
+      <span class="txt"><span class="thai">ขอสั่งอาหารครับ</span><span class="rom">khɔɔ sang aahaan khrap</span><span class="eng">I would like to order (male)</span></span>
+      <span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+    </button>
+    <button class="row" data-src="audio/g2-03.mp3">
+      <span class="num">3</span>
+      <span class="txt"><span class="thai">อร่อยมาก</span><span class="rom">arɔɔy maak</span><span class="eng">Very delicious</span></span>
+      <span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+    </button>
+    <button class="row" data-src="audio/g2-04.mp3">
+      <span class="num">4</span>
+      <span class="txt"><span class="thai">เผ็ดน้อย</span><span class="rom">phet nɔɔy</span><span class="eng">A little spicy</span></span>
+      <span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+    </button>
+    <button class="row" data-src="audio/g2-05.mp3">
+      <span class="num">5</span>
+      <span class="txt"><span class="thai">ขอน้ำเปล่าครับ</span><span class="rom">khɔɔ naam plao khrap</span><span class="eng">Water please (male)</span></span>
+      <span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+    </button>
+    <button class="row" data-src="audio/g2-06.mp3">
+      <span class="num">6</span>
+      <span class="txt"><span class="thai">กินเจ</span><span class="rom">kin ce</span><span class="eng">I am vegetarian</span></span>
+      <span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+    </button>
+    <button class="row" data-src="audio/g2-07.mp3">
+      <span class="num">7</span>
+      <span class="txt"><span class="thai">แพ้อาหารทะเล</span><span class="rom">phɛɛ aahaan thale</span><span class="eng">I am allergic to seafood</span></span>
+      <span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+    </button>
+    <button class="row" data-src="audio/g2-08.mp3">
+      <span class="num">8</span>
+      <span class="txt"><span class="thai">หิวข้าว</span><span class="rom">hiw khaao</span><span class="eng">I am hungry</span></span>
+      <span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+    </button>
+    <button class="row" data-src="audio/g2-09.mp3">
+      <span class="num">9</span>
+      <span class="txt"><span class="thai">อิ่มแล้ว</span><span class="rom">im lɛɛo</span><span class="eng">I am full</span></span>
+      <span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+    </button>
+    <button class="row" data-src="audio/g2-10.mp3">
+      <span class="num">10</span>
+      <span class="txt"><span class="thai">เอาอีกอันนึง</span><span class="rom">ao iik an nueng</span><span class="eng">One more please</span></span>
+      <span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+    </button></div>
+<div class="nav"><a class="" href="player-1.html">1</a><a class="on" href="player-2.html">2</a><a class="" href="player-3.html">3</a><a class="" href="player-4.html">4</a><a class="" href="player-5.html">5</a></div>
+<div class="foot">Tap any phrase to hear a native speaker · สบายไทย · SABAI THAI</div>
+</div>
+<script>
+const rows=[...document.querySelectorAll('.row')];let audio=null,cur=-1,chain=false;
+function stop(){if(audio){audio.pause();audio=null}rows.forEach(r=>r.classList.remove('playing'));cur=-1}
+function play(i,ch){stop();cur=i;chain=!!ch;const r=rows[i];r.classList.add('playing');r.scrollIntoView({block:'nearest',behavior:'smooth'});audio=new Audio(r.dataset.src);audio.play();audio.onended=()=>{r.classList.remove('playing');if(chain&&i+1<rows.length)play(i+1,true);else{audio=null;cur=-1}}}
+rows.forEach((r,i)=>r.addEventListener('click',()=>{if(cur===i&&!chain)stop();else play(i,false)}));
+document.getElementById('all').addEventListener('click',()=>{if(chain){stop()}else play(0,true)});
+</script></body></html>
